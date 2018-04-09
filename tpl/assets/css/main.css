@@ -1,0 +1,29 @@
+header {
+	padding: 154px 0 100px;
+}
+@media (min-width: 992px) {
+	header {
+		padding: 156px 0 100px;
+	}
+}
+section {
+	padding: 50px 0;
+}
+#commentTable{
+	width:90%;
+	margin:0px auto;
+}
+@media only screen and (max-width: 768px) {
+	#commentTable td:nth-child(3),#commentTable th:nth-child(3){
+		visibility:hidden;
+	}
+}
+@media screen and (min-width : 1224px){
+	#commentTable td:nth-child(3),#commentTable th:nth-child(3){
+		visibility:visible;
+	}
+}
+.card{
+	margin-bottom:5px;
+}
+

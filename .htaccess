@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^page/([^/.]+)/?$ index.php?s=$1 [L]
