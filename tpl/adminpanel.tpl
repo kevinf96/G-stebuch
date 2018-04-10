@@ -41,28 +41,30 @@
 									</div>									
 								</div>
 								<div class="tab-pane fade" id="manageComments" role="tabpanel" aria-labelledby="manageComments-tab">
-									<table class="table table-striped">
-										<thead>
-											<tr>
-												<th>Benutzername</th>
-												<th>Nachricht</th>
-												<th>Datum</th>
-												<th>Aktion</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												{% for comment in comments %}
+									<div class="table-responsive-lg">
+										<table class="table table-striped">
+											<thead>
 												<tr>
-													<td>{{ comment.nickname }}</td>
-													<td>{{ comment.message }}</td>
-													<td>{{ comment.createtime|date("d.m.Y") }}</td>
-													<td><button type="button" class="btn btn-danger deleteBtn" aria-label="Left Align" data-src="{{ comment.id }}">Löschen</button>
+													<th>Benutzername</th>
+													<th>Nachricht</th>
+													<th>Datum</th>
+													<th>Aktion</th>
 												</tr>
-												{% endfor %}
-											</tr>
-										</tbody>
-									</table>
+											</thead>
+											<tbody>
+												<tr>
+													{% for comment in comments %}
+													<tr>
+														<td>{{ comment.nickname }}</td>
+														<td>{{ comment.message }}</td>
+														<td>{{ comment.createtime|date("d.m.Y") }}</td>
+														<td><button type="button" class="btn btn-danger deleteBtn" aria-label="Left Align" data-src="{{ comment.id }}">Löschen</button>
+													</tr>
+													{% endfor %}
+												</tr>
+											</tbody>
+										</table>
+									</div>
 								</div>
 							</div>
 						</div>

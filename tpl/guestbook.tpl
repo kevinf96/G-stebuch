@@ -58,24 +58,26 @@ $(document).ready( function () {
 					<div class="card">
 						<div class="card-header">Kommentare</div>
 						<div class="card-body">
-							<table class="table" id="commentTable">
-								<thead>
-									<tr>
-										<th>Benutzername</th>
-										<th>Kommentar</th>
-										<th>Zeitpunkt</th>
-									</tr>
-								</thead>
-								<tbody>
-									{% for comment in comments %}
-									<tr>
-										<td>{{ comment.nickname }}</td>
-										<td>{{ comment.message }}</td>
-										<td>{{ comment.createtime|date("d.m.Y") }}</td>
-									</tr>
-									{% endfor %}								
-								</tbody>
-							</table>
+							<div class="table-responsive">
+								<table class="table" id="commentTable">
+									<thead>
+										<tr>
+											<th>Benutzername</th>
+											<th>Kommentar</th>
+											<th>Zeitpunkt</th>
+										</tr>
+									</thead>
+									<tbody>
+										{% for comment in comments %}
+										<tr>
+											<td>{{ comment.nickname }}</td>
+											<td>{{ comment.message }}</td>
+											<td>{{ comment.createtime|date("d.m.Y") }}</td>
+										</tr>
+										{% endfor %}								
+									</tbody>
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>

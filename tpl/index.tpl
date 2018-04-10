@@ -35,7 +35,7 @@
               <a class="nav-link js-scroll-trigger" href="{{ baseUrl }}/page/admin/">Adminbereich</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="{{ baseUrl }}/page/guestbook/">Code ansehen</a>
+              <a class="nav-link js-scroll-trigger" target="_blank" href="https://github.com/kevinf96/G-stebuch">Code ansehen</a>
             </li>
           </ul>
         </div>
