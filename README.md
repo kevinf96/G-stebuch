@@ -9,6 +9,7 @@
 ### Installation
 Vorraussetzung: 
 - PHP Version 7.0
+- MySQL Datenbank
 
 ### Installation
 1. /inc/config.php öffnen und anpassen (Selbsterklärend)
