@@ -6,7 +6,7 @@
 		"cacheFolder" => "/www/cache"  //Pfad zum Cache Ordner
 	);
 
-	//Hier können Seiten hinzugefügt werde
+	//Hier können Seiten hinzugefügt werden
 	//Beispiel: https://webseite.com/page/admin lädt adminpanel.php/.tpl
 	$pages = array(
 		"guestbook" => "guestbook",
