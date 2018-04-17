@@ -1,27 +1,4 @@
 {% extends "index.tpl" %}
-{% block javascript %}
-<script>
-$(document).ready( function () {
-    $('#commentTable').DataTable( {
-		responsive: true,
-        "language": {
-			"search": "Suche:",
-            "lengthMenu": "_MENU_ Einträge pro Seite",
-            "zeroRecords": "Es sind keine Einträge vorhanden",
-            "info": "Seite _PAGE_ von _PAGES_",
-            "infoEmpty": "Es sind keine Einträge vorhanden",
-            "infoFiltered": "(Gefiltert aus _MAX_ Einträgen)",
-            "paginate": {
-                first: "Erste",
-                last: "Letzte",
-                next: "Weiter",
-                previous: "Zurück"
-            },			
-        }
-    } );	
-} );
-</script>
-{% endblock %}
 {% block content %}
 		<div class="container">	
 			<div class="row justify-content-md-center">
@@ -78,6 +55,17 @@ $(document).ready( function () {
 									</tbody>
 								</table>
 							</div>
+							<nav aria-label="...">
+							  <ul class="pagination">
+								{% for i in 1..paginationTotalPages %}
+									{% if loop.index == paginationPage %}
+										<li class="page-item active"><a class="page-link" href="{{ baseUrl }}/page/guestbook/{{ i }}/">{{ i }}</a></li>
+									{% else %}
+										<li class="page-item"><a class="page-link" href="{{ baseUrl }}/page/guestbook/{{ i }}/">{{ i }}</a></li>
+									{% endif %}
+								{% endfor %}
+							  </ul>
+							</nav>
 						</div>
 					</div>
 				</div>
