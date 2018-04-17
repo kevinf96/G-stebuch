@@ -1,2 +1,3 @@
 RewriteEngine On
 RewriteRule ^page/([^/.]+)/?$ index.php?s=$1 [L]
+RewriteRule ^page/guestbook/([^/.]+)/?$ index.php?s=guestbook&page=$1 [L]

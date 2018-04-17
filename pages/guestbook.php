@@ -1,5 +1,6 @@
 <?PHP
 require_once __DIR__ . "/../inc/guestbook.php";
+require_once __DIR__ . "/../inc/pagination.php";
 
 $Guestbook = new Guestbook;
 if(isset($_POST["commentSubmit"])){
@@ -35,4 +36,9 @@ if (is_null($commentCache->get())) {
 else{
 	$renderArray["comments"] = $commentCache->get();
 }
+
+$Pagination = new Pagination($renderArray["comments"],2);
+$renderArray["paginationPage"] = (isset($_GET["page"])) ? $_GET["page"] : 1;
+$renderArray["comments"] = $Pagination->getPage($renderArray["paginationPage"]);
+$renderArray["paginationTotalPages"] = $Pagination->totalPages;
 ?>
